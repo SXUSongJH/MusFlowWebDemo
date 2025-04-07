@@ -24,8 +24,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>MusFlow: Multimodal Music Generation via Conditional Flow Matching</title>
+  <link rel="icon" type="image/svg+xml" href="static/images/musflow.svg">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,9 +52,10 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">MusFlow: Multimodal Music Generation via Conditional Flow Matching</h1>
+            <!-- Commenting out author information
             <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
+              
               <span class="author-block">
                 <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
                 <span class="author-block">
@@ -68,10 +69,12 @@
                     <span class="author-block">Institution Name<br>Conferance name and year</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
+            -->
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
+                      <!-- Commenting out Paper button
                       <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
@@ -81,15 +84,16 @@
                         <span>Paper</span>
                       </a>
                     </span>
+                      -->
 
-                    <!-- Supplementary PDF link -->
+                    <!-- Dataset link (replaced Supplementary) -->
                     <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      <a href="#" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
+                        <i class="fas fa-database"></i>
                       </span>
-                      <span>Supplementary</span>
+                      <span>Dataset (Coming Soon!)</span>
                     </a>
                   </span>
 
@@ -100,11 +104,12 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Code (Coming Soon!)</span>
                   </a>
                 </span>
 
                 <!-- ArXiv abstract Link -->
+                <!-- Commenting out arXiv button
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
@@ -114,6 +119,10 @@
                   <span>arXiv</span>
                 </a>
               </span>
+                -->
+            </div>
+            <div class="is-size-6 publication-authors">
+              <span><small>Dataset and Code will be released upon paper acceptance.</small></span>
             </div>
           </div>
         </div>
@@ -123,22 +132,16 @@
 </section>
 
 
-<!-- Teaser video-->
+<!-- MusFlow Framework figure -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+      <h2 class="title is-3 has-text-centered">MusFlow Framework</h2>
+      <img src="static/images/MusFlow_framework.jpg" alt="MusFlow Framework" width="100%">
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End MusFlow Framework figure -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -148,7 +151,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Music generation aims to create music segments that align with human aesthetics based on diverse conditional information. Despite advancements in generating music from specific textual descriptions (e.g., style, genre, instruments), the practical application of these models is hindered by ordinary users' limited expertise or time to write accurate prompts. To bridge this application gap, this paper introduces MusFlow, a novel multimodal music generation model using Conditional Flow Matching. We employ multiple Multi-Layer Perceptrons (MLPs) to align multimodal conditional information into the CLAP embedding space of audio. Conditional flow matching is trained to reconstruct the compressed Mel-spectrogram in the pretrained VAE latent space guided by aligned feature embedding. MusFlow can generate music from images, story texts, and music captions. To collect data for model training, inspired by multi-agent collaboration, we construct an intelligent data annotation workflow centered around a fine-tuned Qwen2-VL model. Using this workflow, we build a new multimodal music dataset, MMusSet, with each sample containing a quadruple of image, story text, music caption, and music piece. We conduct four sets of experiments: image-to-music, story-to-music, caption-to-music, and multimodal music generation. Experimental results demonstrate that MusFlow can generate high-quality music pieces whether the input conditions are unimodal or multimodal. We hope this work can advance the application of music generation in multimedia field, making music creation more accessible.
           </p>
         </div>
       </div>
@@ -158,130 +161,277 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
+<!-- Dataset Creation -->
 <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+  <div class="container">
+    <div class="hero-body">
+      <h2 class="title is-3 has-text-centered">Dataset Creation</h2>
+      
+      <!-- 添加图片和标题的容器 -->
+      <h3 class="title is-4 has-text-centered" style="margin-bottom: 1em;">Multi-Agent Data Annotation Workflow</h3>
+      <div style="margin-bottom: 2em; max-width: 70%; margin-left: auto; margin-right: auto;">
+        <img src="static/images/MultiAgentWorkflow.png" alt="Multi-Agent Workflow for Dataset Creation" width="100%">
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+      
+      <!-- 数据集示例部分 -->
+      <h3 class="title is-4 has-text-centered" style="margin-top: 2em;">Dataset Examples</h3>
+      
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <table class="table is-bordered is-striped is-hoverable" style="width: 100%; table-layout: fixed; font-size: 0.9rem;">
+            <thead>
+              <tr>
+                <th class="has-text-centered" style="width: 20%">Image</th>
+                <th class="has-text-centered" style="width: 25%">Story</th>
+                <th class="has-text-centered" style="width: 35%">Caption</th>
+                <th class="has-text-centered" style="width: 20%">Music</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="static/images/dataset_image1.jpg" alt="Dataset Example 1" width="100%"></td>
+                <td>There are two men dressed in armor standing in a field with a castle in the background, one holding a sword and the other holding a shield and shield</td>
+                <td>The music is a medieval battle theme with a strong emphasis on the clash of swords. The tempo is slow and steady, with a deep bass drum rhythm and a melodic string section. The music is intense and dramatic, evoking a sense of courage and determination.</td>
+                <td><audio controls src="static/audios/dataset_audio1.mp3" style="width: 100%;"></audio></td>
+              </tr>
+              <tr>
+                <td><img src="static/images/dataset_image2.jpg" alt="Dataset Example 2" width="100%"></td>
+                <td>Painting of a woman in a white dress sitting on a chair with her hand on her knee and looking off to the side, wearing a white collared shirt and blue ribbon around her neck</td>
+                <td>The music is a classical piece with a melancholic and emotional tone. The instruments used are a piano and a violin, playing a slow and expressive melody. The music is rich and emotional, with a sense of longing and sadness.</td>
+                <td><audio controls src="static/audios/dataset_audio2.mp3" style="width: 100%;"></audio></td>
+              </tr>
+              <tr>
+                <td><img src="static/images/dataset_image3.jpg" alt="Dataset Example 3" width="100%"></td>
+                <td>There is a painting of a man standing in a field next to a pile of hay with a horse in the background and a tree in the foreground</td>
+                <td>The music is instrumental, featuring a harmonious blend of acoustic guitar, harmonica, and fiddle. The tempo is slow, with a melancholic and nostalgic tone, evoking a sense of longing and reflection. The music is accompanied by the sound of birds chirping and the rustling of leaves, creating a serene and peaceful atmosphere.</td>
+                <td><audio controls src="static/audios/dataset_audio3.mp3" style="width: 100%;"></audio></td>
+              </tr>
+              <tr>
+                <td><img src="static/images/dataset_image4.png" alt="Dataset Example 4" width="100%"></td>
+                <td>Black and white photo of a group of men in suits playing musical instruments in a room with a piano, keyboard, microphone, and other musical instruments.</td>
+                <td>The music track in question belongs to the jazz genre, exuding a vibrant and dynamic mix of emotions, blending joy and a subtle touch of melancholy. The composition typically features a brass section, saxophones, and a rhythm section, including drums and double bass, with the saxophone often leading the melody.</td>
+                <td><audio controls src="static/audios/dataset_audio4.wav" style="width: 100%;"></audio></td>
+              </tr>
+              <tr>
+                <td><img src="static/images/dataset_image5.png" alt="Dataset Example 5" width="100%"></td>
+                <td>There is a group of people that are playing music together in a concert with one woman holding a violin and the other woman holding a violin in their hand.</td>
+                <td>This concerto is characterized by its energetic and intricate nature, with four solo violins engaging in lively dialogues and harmonious passages. Set against a backdrop of a string orchestra, it serves as a showcase for virtuosity and technical prowess.</td>
+                <td><audio controls src="static/audios/dataset_audio5.wav" style="width: 100%;"></audio></td>
+              </tr>
+              <tr>
+                <td><img src="static/images/dataset_image6.png" alt="Dataset Example 6" width="100%"></td>
+                <td>There is a woman that is holding a guitar in her hand and wearing a hat on top of her head sitting on the steps of a door way.</td>
+                <td>The song belongs to the Adult Standards genre and exudes a sense of nostalgia and tranquility. It is typically composed with instruments such as the piano, strings like the violin and cello, and occasionally a gentle flute, creating a delicate and ethereal musical landscape. The song often explores themes of yearning, longing, and a sense of timeless beauty.</td>
+                <td><audio controls src="static/audios/dataset_audio6.wav" style="width: 100%;"></audio></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
+<!-- End Dataset Creation -->
 
 
-
-
-<!-- Youtube video -->
+<!-- MusFlow Generation -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <h2 class="title is-3 has-text-centered">MusFlow Generation</h2>
+      
+      <!-- Caption-to-Music -->
+      <div class="content mt-5">
+        <h3 class="title is-4 has-text-centered">Caption-to-Music</h3>
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <div class="box">
+              <div class="table-container" style="max-width: 100%; overflow-x: auto;">
+                <table class="table is-bordered is-striped is-hoverable" style="width: 100%;">
+                  <thead>
+                    <tr>
+                      <th class="has-text-centered" style="width: 70%">Caption Input</th>
+                      <th class="has-text-centered" style="width: 30%">Generated Music</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>The music features a piano playing a melancholic melody, accompanied by a soft drum beat, a bass guitar playing a simple tune, and a harmonica playing a sad tune. The atmosphere is somber and melancholic, with a sense of longing and sadness.</td>
+                      <td><audio controls src="static/audios/caption2music_audio1.mp3" style="width: 100%;"></audio></td>
+                    </tr>
+                    <tr>
+                      <td>The music is classical, with a majestic and grandiose atmosphere. The instruments include trumpets, violins, and a piano, playing a harmonious melody that evokes a sense of awe and reverence. The music is rich in texture and depth, with the instruments playing in unison to create a cohesive and powerful composition.</td>
+                      <td><audio controls src="static/audios/caption2music_audio2.wav" style="width: 100%;"></audio></td>
+                    </tr>
+                    <tr>
+                      <td>This music track belongs to the pop genre and evokes feelings of joy and positivity. It incorporates a lively combination of instruments, starting with a dynamic rhythm section featuring drums and bass, accompanied by infectious keyboard melodies and a spirited horn section.</td>
+                      <td><audio controls src="static/audios/caption2music_audio3.mp3" style="width: 100%;"></audio></td>
+                    </tr>
+                    <tr>
+                      <td>The track is a fusion of Hip-Hop and R&B, emanating confidence and assertiveness, embodying an energetic and empowering vibe. The composition incorporates rhythmic beats, basslines, synthesizers, and electronic elements, creating a dynamic musical arrangement. The central theme centers around empowerment, self-confidence, and embracing individuality, encouraging listeners to assert themselves and break free from societal expectations.</td>
+                      <td><audio controls src="static/audios/caption2music_audio4.wav" style="width: 100%;"></audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      
+      <!-- Story-to-Music -->
+      <div class="content mt-5">
+        <h3 class="title is-4 has-text-centered">Story-to-Music</h3>
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <div class="box">
+              <div class="table-container" style="max-width: 100%; overflow-x: auto;">
+                <table class="table is-bordered is-striped is-hoverable" style="width: 100%;">
+                  <thead>
+                    <tr>
+                      <th class="has-text-centered" style="width: 70%">Story Input</th>
+                      <th class="has-text-centered" style="width: 30%">Generated Music</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>An oil painting of a field of bluebonnets with trees in the foreground and a river running through the middle of the field to the far side.</td>
+                      <td><audio controls src="static/audios/story2music_audio1.wav" style="width: 100%;"></audio></td>
+                    </tr>
+                    <tr>
+                      <td>There is a drawing of a woman sitting in a bath tub with a glass of wine in her hand and a cigarette in her mouth.</td>
+                      <td><audio controls src="static/audios/story2music_audio2.mp3" style="width: 100%;"></audio></td>
+                    </tr>
+                    <tr>
+                      <td>This is an old black and white photo of a man and a woman singing together in front of a man playing a guitar and a woman holding a violin.</td>
+                      <td><audio controls src="static/audios/story2music_audio3.mp3" style="width: 100%;"></audio></td>
+                    </tr>
+                    <tr>
+                      <td>There is a young man that is playing a piano in the street at night with the lights of the city in the window behind him and a red light in the background.</td>
+                      <td><audio controls src="static/audios/story2music_audio4.mp3" style="width: 100%;"></audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Image-to-Music -->
+      <div class="content mt-5">
+        <h3 class="title is-4 has-text-centered">Image-to-Music</h3>
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <div class="box">
+              <div class="table-container" style="max-width: 100%; overflow-x: auto;">
+                <table class="table is-bordered is-striped is-hoverable" style="width: 100%;">
+                  <thead>
+                    <tr>
+                      <th class="has-text-centered" style="width: 30%">Image Input</th>
+                      <th class="has-text-centered" style="width: 70%">Generated Music</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align: center;"><img src="static/images/image2music_image1.jpg" alt="Image to Music Example 1" width="80%"></td>
+                      <td style="text-align: center; vertical-align: middle; height: 200px;"><audio controls src="static/audios/image2music_audio1.mp3" style="width: 100%;"></audio></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center;"><img src="static/images/image2music_image2.jpg" alt="Image to Music Example 2" width="80%"></td>
+                      <td style="text-align: center; vertical-align: middle; height: 200px;"><audio controls src="static/audios/image2music_audio2.mp3" style="width: 100%;"></audio></td>
+                    </tr>
+                    <tr>
+                      <td><img src="static/images/image2music_image3.png" alt="Image to Music Example 3" width="100%"></td>
+                      <td style="text-align: center; vertical-align: middle; height: 200px;"><audio controls src="static/audios/image2music_audio3.wav" style="width: 100%;"></audio></td>
+                    </tr>
+                    <tr>
+                      <td><img src="static/images/image2music_image4.png" alt="Image to Music Example 4" width="100%"></td>
+                      <td style="text-align: center; vertical-align: middle; height: 200px;"><audio controls src="static/audios/image2music_audio4.wav" style="width: 100%;"></audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Multimodal Music Generation -->
+      <div class="content mt-5">
+        <h3 class="title is-4 has-text-centered">Multimodal Music Generation</h3>
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <div class="box">
+              <div class="table-container" style="max-width: 100%; overflow-x: auto;">
+                <table class="table is-bordered is-striped is-hoverable" style="width: 100%;">
+                  <thead>
+                    <tr>
+                      <th class="has-text-centered" style="width: 25%">Image Input</th>
+                      <th class="has-text-centered" style="width: 35%">Caption Input</th>
+                      <th class="has-text-centered" style="width: 20%">Story Input</th>
+                      <th class="has-text-centered" style="width: 20%">Generated Music</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align: center;"><img src="static/images/multimodal_image1.jpg" alt="Multimodal Example 1" width="80%"></td>
+                      <td style="font-size: 0.9rem;">The music is a mix of ambient and electronic elements, with a focus on synthesizers and electronic instruments. The tempo is slow and steady, creating a sense of calm and introspection. The music is ethereal and otherworldly, with a sense of mystery and wonder. The overall atmosphere is serene and meditative, with a sense of tranquility and peace.</td>
+                      <td style="font-size: 0.9rem;">There is a painting of a large building with a clock on it's face in the middle of a foggy city at sunset time, with a red sky in the background.</td>
+                      <td style="text-align: center; vertical-align: top;"><audio controls src="static/audios/multimodal_audio1.mp3" style="width: 100%;"></audio></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center;"><img src="static/images/multimodal_image2.jpg" alt="Multimodal Example 2" width="80%"></td>
+                      <td style="font-size: 0.9rem;">The music is a mellow instrumental with a soft and soothing melody played by a flute and a gentle rhythm played by a piano. The music is slow, soft, and calming, with a gentle and soothing melody that is soothing and calming. The music is perfect for relaxation, meditation, and yoga.</td>
+                      <td style="font-size: 0.9rem;">There is a picture of a woman with a flower in her hair and a butterfly in her hair on a black and yellow background with a yellow border.</td>
+                      <td style="text-align: center; vertical-align: top;"><audio controls src="static/audios/multimodal_audio2.mp3" style="width: 100%;"></audio></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center;"><img src="static/images/multimodal_image3.jpg" alt="Multimodal Example 3" width="80%"></td>
+                      <td style="font-size: 0.9rem;">The music is a mellow, soothing, and calming instrumental piece with a serene and peaceful atmosphere. The music features a harmonious blend of various instruments, including a piano, flute, and strings, playing in a gentle and melodic manner. The tempo is slow and steady, creating a sense of tranquility and relaxation. The music is perfect for meditation, yoga, or any other activity that requires a calm and soothing atmosphere.</td>
+                      <td style="font-size: 0.9rem;">painting of cows grazing in a field with a thatched house in the background and trees in the foreground, with a cloudy sky in the background.</td>
+                      <td style="text-align: center; vertical-align: top;"><audio controls src="static/audios/multimodal_audio3.wav" style="width: 100%;"></audio></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center;"><img src="static/images/multimodal_image4.png" alt="Multimodal Example 4" width="100%"></td>
+                      <td style="font-size: 0.9rem;">The music vedio "Sorry" is dance-pop song. It has a melancholy, atoning tone and conveys a sense of remorse and apology. It combines tropical and electronic components to provide a positive but highly charged environment.The song's tropical and danceable mood is aided by the usage of electronic beats, synthesizers, and vocal harmonies, as well as a distinctive steel drum-like sound.</td>
+                      <td style="font-size: 0.9rem;">There are three women that are dancing together in a dance pose on a white background and one woman is wearing a pink shirt and the other is wearing a green shirt and blue jeans.</td>
+                      <td style="text-align: center; vertical-align: top;"><audio controls src="static/audios/multimodal_audio4.mp3" style="width: 100%;"></audio></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center;"><img src="static/images/multimodal_image5.png" alt="Multimodal Example 5" width="100%"></td>
+                      <td style="font-size: 0.9rem;">The track in question is a lively Bossa Nova composition that evokes a joyful and celebratory atmosphere. It typically features classical guitar, often played with intricate fingerpicking, and soft, melodic vocals that convey the joy of dancing samba. The central theme of the song revolves around the celebration of samba, inviting people to come together and dance. </td>
+                      <td style="font-size: 0.9rem;">There is a woman that is playing a trumpet in front of a man who is sitting and playing a piano.</td>
+                      <td style="text-align: center; vertical-align: top;"><audio controls src="static/audios/multimodal_audio5.mp3" style="width: 100%;"></audio></td>
+                    </tr>
+                    <tr>
+                      <td style="text-align: center;"><img src="static/images/multimodal_image6.png" alt="Multimodal Example 6" width="100%"></td>
+                      <td style="font-size: 0.9rem;">The music track from "The Fairly OddParents" falls into the category of whimsical and cheerful children's music. It exudes feelings of lightheartedness and fun, creating an atmosphere of joy and playfulness. The composition features a variety of instruments, including xylophones, flutes, and playful percussion, creating a sequence that reflects the show's quirky and magical theme. </td>
+                      <td style="font-size: 0.9rem;">There is a cartoon picture of a man and a woman standing in front of a mirror with their hands in the air and pointing at each other way.</td>
+                      <td style="text-align: center; vertical-align: top;"><audio controls src="static/audios/multimodal_audio6.mp3" style="width: 100%;"></audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- End MusFlow Generation -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
+<!-- 注释掉BibTeX模块
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>BibTex Code Here</code></pre>
   </div>
 </section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
+-->
 
 
   <footer class="footer">
@@ -289,13 +439,7 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+          <!-- 移除了页脚文字 -->
         </div>
       </div>
     </div>
